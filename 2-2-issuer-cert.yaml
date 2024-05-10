@@ -1,0 +1,29 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: porch-system-server-certificate
+  namespace: porch-system
+spec:
+  isCA: true
+  commonName: my-selfsigned-ca
+  secretName: porch-system-server-tls
+  secretTemplate:
+    annotations:
+      cert-manager.io/allow-direct-injection: "true"
+  duration: 1h # 90d
+  renewBefore: 55m # 15d
+  issuerRef:
+    name: my-ca-issuer
+    kind: Issuer
+    group: cert-manager.io
+  dnsNames:
+  - api.porch-system.svc
+
+---
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: my-ca-issuer
+  namespace: porch-system
+spec:
+  selfSigned: {}
