@@ -51,7 +51,7 @@ spec:
       containers:
         - name: porch-controllers
           # Update to the image of your porch-controllers build.
-          image: nephio/porch-controllers:ubuntu-48bb15a-dirty
+          image: docker.io/nephio/porch-controllers:v2.0.0
           imagePullPolicy: IfNotPresent
           env:
             - name: ENABLE_PACKAGEVARIANTS
