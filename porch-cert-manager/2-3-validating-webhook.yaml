@@ -3,7 +3,7 @@ kind: ValidatingWebhookConfiguration
 metadata:
   name: packagerev-deletion-validating-webhook
   annotations:
-    cert-manager.io/inject-ca-from-secret: porch-system/porch-system-server-tls
+    cert-manager.io/inject-ca-from: porch-system/porch-system-server-certificate
 webhooks:
 - admissionReviewVersions:
   - v1

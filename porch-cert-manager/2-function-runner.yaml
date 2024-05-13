@@ -39,7 +39,7 @@ spec:
       serviceAccountName: porch-fn-runner
       containers:
         - name: function-runner
-          image: porch-kind/porch-function-runner:test
+          image: nephio/porch-function-runner:ubuntu-48bb15a-dirty
           imagePullPolicy: IfNotPresent
           command:
             - /server

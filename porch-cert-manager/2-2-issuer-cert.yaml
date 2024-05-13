@@ -8,8 +8,8 @@ spec:
   commonName: my-selfsigned-ca
   secretName: porch-system-server-tls
   secretTemplate:
-    annotations:
-      cert-manager.io/allow-direct-injection: "true"
+    #annotations:
+      #cert-manager.io/allow-direct-injection: "true"
   duration: 1h # 90d
   renewBefore: 55m # 15d
   issuerRef:
