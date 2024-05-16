@@ -71,6 +71,8 @@ spec:
               value: porch-server
             - name: CERT_STORAGE_DIR
               value: /etc/webhook/certs
+            - name: CERT_MAN_WEBHOOKS
+              value: "true"
           args:
             - --function-runner=function-runner:9445
             - --cache-directory=/cache
